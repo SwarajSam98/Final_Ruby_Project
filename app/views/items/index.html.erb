@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+<div class="container hr">
+  <h1><%= t("items.BOOKS") %></h1>
+  <%= render partial: "search/book_form" %>
+
+  <% if @items.size > 0 %>
+    <%= link_to t('items.download_as_excel'), items_path(format: :xlsx), class: "btn btn-outline-primary" %>
+    <%= link_to t('items.download_as_csv'), items_path(format: :csv), class: "btn btn-outline-primary" %>
+    <%= link_to t('items.download_as_pdf'), items_path(format: :pdf), class: "btn btn-outline-primary" %>
+  <% end %>
+  <%= link_to t('items.upload_from_excel'), new_items_import_path, class: "btn btn-outline-primary" %>
+  <%= render partial: "items_listing"%>
+</div>

@@ -1,0 +1,21 @@
+<table class="items_listings table-bordered table-striped" style="background-image: url('https://images.template.net/wp-content/uploads/2015/11/25190740/Ash-Color-Plain-Wallpaper-Download.jpg');">
+<thead>
+  <tr class="table-dark">
+    <th><%= t('items.name') %></th>
+    <th><%= t('items.quantity') %></th>
+    <th colspan="3"></th>
+  </tr>
+</thead>
+
+<tbody>
+  <% @items.each do |item| %>
+    <tr>
+      <td><%= item.name %></td>
+      <td><%= item.quantity %></td>
+      <td><%= link_to t('global.show'), item, class: "btn btn-info" %></td>
+      
+      <td><%= link_to t('global.destroy'), item, method: :delete, data: { confirm: t('global.are_you_sure') }, class: "btn btn-danger" %></td>
+    </tr>
+  <% end %>
+</tbody>
+</table>

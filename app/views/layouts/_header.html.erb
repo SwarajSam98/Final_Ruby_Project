@@ -1,0 +1,25 @@
+<div class="container">
+  
+  <div class="header_container">
+    <% if current_user %>
+      <%= link_to t("header.home"), root_path, class: "btn btn-default" %>
+      <%= link_to t('header.new_student'), new_student_path, class: "btn btn-default" %>
+      <%= link_to t("header.students_list"), root_path, class: "btn btn-default" %>
+      <%= link_to t("header.books_list"), items_path, class: "btn btn-default" %>
+
+      <%= link_to t('header.russian'), root_path(locale: :ru), class: "btn btn-default" %>
+      <%= link_to t('header.french'), root_path(locale: :fr), class: "btn btn-default" %>
+      <%= link_to t('header.english'), root_path(locale: :en), class: "btn btn-default" %>
+      <%= link_to t('header.japanese'), root_path(locale: :ja), class: "btn btn-default" %>
+      <%= link_to t("header.sign_out"), destroy_user_session_path, method: :delete, class: "btn btn-primary btn-lg float-right" %>
+      
+    <% else %>
+      <%= link_to t("header.sign_in"), new_user_session_path, class: "btn btn-primary" %>
+      <%= link_to t("header.sign_up"), new_user_registration_path, class: "btn btn-primary" %>
+      <%= link_to t('header.russian'), root_path(locale: :ru), class: "btn btn-primary" %>
+      <%= link_to t('header.french'), root_path(locale: :fr), class: "btn btn-primary" %>
+      <%= link_to t('header.english'), root_path(locale: :en), class: "btn btn-primary" %>
+      <%= link_to t('header.japanese'), root_path(locale: :ja), class: "btn btn-primary" %>
+    <% end %>
+    
+</div>

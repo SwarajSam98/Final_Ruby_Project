@@ -1,0 +1,115 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at https://guides.rubyonrails.org/i18n.html.
+
+#en:
+#  hello: "Hello world"
+
+fr:
+ header:
+   project_1: "PROJET 1"
+   french: "Française"
+   new_student: "Nouvel étudiant"
+   students_list: "Liste des étudiants"
+   books_list: "Liste des livres"
+   #live_messages: "Messages EN DIRECT"
+   home: "Accueil"
+   sign_out: "Déconnexion"
+   sign_in: "Se connecter"
+   sign_up: "S'inscrire"
+   english: "English"
+ 
+ items:
+   items: "Articles"
+   download_as_excel: "Télécharger en Excel"
+   download_as_csv: "Télécharger au format CSV"
+   download_as_pdf: "Télécharger en PDF"
+   upload_from_excel: "Télécharger depuis Excel"
+   new_item: "Nouvel article"
+   name: "Nom"
+   quantity: "Quantité"
+   editing_item: "Modifier l'élément"
+   forms:
+     name: :name
+     quantity: :quantité
+ 
+ global:
+   show: "Montrer"
+   edit: "Éditer"
+   destroy: "Détruire"
+   are_you_sure: "Êtes-vous sûr?"
+   back: "Retour"
+   prohibited_this_item_from_being_saved: "interdit l'enregistrement de cet élément:"
+   forms:
+     submit: "Soumettre"
+ 
+ items_imports:
+   import_items_from_excel: "Importer des éléments depuis Excel"
+   note_only_spreadsheets: "Remarque: importez uniquement les feuilles de calcul précédemment téléchargées à partir de cette application."
+   requirements: "Exigences"
+   here_you_could: "Vous pouvez lister ici les validations que vous avez en place pour votre modèle"
+   that_way_your_user: "De cette façon, votre utilisateur a de meilleures chances de réussir l'importation"
+   select_file: "Choisir le dossier"
+   import_file: "Importer le fichier"
+   download_sample_excel: "Télécharger un exemple Excel"
+   file: "Fichier"
+   errors:
+     prevented_us: "nous a empêché de
+     importer votre feuille de calcul. Veuillez mettre à jour votre feuille de calcul et réessayer."
+ 
+ students:
+   students: "Élèves"
+   first_name: "Prénom"
+   last_name: "Nom de famille"
+   year_of_birth: "Année de naissance"
+   gender: "Le genre"
+   address: "Adresse"
+   fathers_name: "Le nom du père"
+   mothers_name: "Le nom de la mère"
+   email: "Email"
+   editing_student: "Modification des étudiants"
+   new_student: "Nouvel étudiant"
+   showing_the_details: "Affichage des détails de:"
+   errors:
+     prohibited_this_student: "interdit à cet élève d'être sauvé:"
+   students_listing:
+     first_name: "Prénom"
+     last_name: "Nom de famille"
+     year_of_birth: "Année de naissance"
+     gender: "Le genre"
+     address: "Adresse"
+     fathers_name: "Le nom du père"
+     mothers_name: "Le nom de la mère"
+     email: "Email"
+
+ 
+ search:
+   search: "Chercher"
+   search_for: "Rechercher:"

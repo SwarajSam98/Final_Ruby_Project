@@ -1,0 +1,32 @@
+<table class="students_listings table-bordered table-striped" style="background-image: url('https://images.template.net/wp-content/uploads/2015/11/25190740/Ash-Color-Plain-Wallpaper-Download.jpg');">
+  <thead>
+    <tr class="table-dark">
+      <th><%= t('students.students_listing.first_name') %></th>
+      <th><%= t('students.students_listing.last_name') %></th>
+      <th><%= t('students.students_listing.year_of_birth') %></th>
+      <th><%= t('students.students_listing.gender') %></th>
+      <th><%= t('students.students_listing.address') %></th>
+      <th><%= t('students.students_listing.fathers_name') %></th>
+      <th><%= t('students.students_listing.mothers_name') %></th>
+      <th><%= t('students.students_listing.email') %></th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+  <tbody >
+    <% @students.each do |student| %>
+      <tr>
+        <td><%= student.first_name %></td>
+        <td><%= student.last_name %></td>
+        <td><%= student.year_of_birth %></td>
+        <td><%= student.gender %></td>
+        <td><%= student.address %></td>
+        <td><%= student.fathers_name %></td>
+        <td><%= student.mothers_name %></td>
+        <td><%= student.email %></td>
+        <td><%= link_to t('global.show'), student, class: "btn btn-primary" %></td>
+        <td><%= link_to t('global.edit'), edit_student_path(student), class: "btn btn-primary" %></td>
+        <td><%= link_to t('global.destroy'), student, method: :delete, data: { confirm: t('global.are_you_sure') }, class: "btn btn-danger" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
